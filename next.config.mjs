@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/denis_visma',
+  assetPrefix: '/denis_visma/',
   eslint: {
     ignoreDuringBuilds: true,
   },
