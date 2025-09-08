@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 
 // Define the translations directly in this file to avoid import issues
 export interface Translations {
@@ -127,9 +127,35 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguageState] = useState<Language>("en");
 
-  const t = translations[language];
+  // On mount, load language from localStorage if available
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedLang = localStorage.getItem("language");
+      if (storedLang === "en" || storedLang === "ru") {
+        setLanguageState(storedLang);
+      }
+    }
+  }, []);
+
+  // Update localStorage when language changes
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("language", language);
+    }
+  }, [language]);
+
+  const setLanguage = (lang: Language) => {
+    console.log('[LanguageContext] setLanguage called with:', lang);
+    setLanguageState(lang);
+  };
+
+  useEffect(() => {
+    console.log('[LanguageContext] language state changed:', language);
+  }, [language]);
+
+  const t = translations[language as Language];
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>

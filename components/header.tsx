@@ -75,7 +75,10 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-primary-foreground/20">
+          <nav
+            key={language}
+            className="md:hidden mt-4 pb-4 border-t border-primary-foreground/20"
+          >
             <div className="flex flex-col space-y-4 pt-4">
               <a
                 href="#about"
@@ -115,21 +118,29 @@ export function Header() {
               <div className="flex items-center space-x-2 pt-2">
                 <Button
                   onClick={() => {
+                    console.log(
+                      "[Header] EN button clicked (mobile), current language:",
+                      language
+                    );
                     setLanguage("en");
                     setIsMenuOpen(false);
                   }}
                   variant={language === "en" ? "secondary" : "ghost"}
-                  className="w-full justify-center"
+                  className="flex-1 justify-center"
                 >
                   EN
                 </Button>
                 <Button
                   onClick={() => {
+                    console.log(
+                      "[Header] RU button clicked (mobile), current language:",
+                      language
+                    );
                     setLanguage("ru");
                     setIsMenuOpen(false);
                   }}
                   variant={language === "ru" ? "secondary" : "ghost"}
-                  className="w-full justify-center"
+                  className="flex-1 justify-center"
                 >
                   RU
                 </Button>
