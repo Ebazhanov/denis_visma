@@ -5,7 +5,6 @@ import Image from "next/image";
 
 export function BrandsSection() {
   const { t } = useLanguage();
-
   return (
     <section id="brands" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
       <div className="container px-4 md:px-6">

@@ -6,36 +6,31 @@ import { CheckCircle, Globe, TrendingDown, Users, Wrench } from "lucide-react";
 
 export function WhyVismaSection() {
   const { t } = useLanguage();
-
   const benefits = [
     {
       icon: <CheckCircle className="h-8 w-8 text-primary" />,
-      title: "Excellent References",
-      description: "Proven track record with satisfied customers worldwide"
+      title: t.excellentReferences,
+      description: t.excellentReferencesDesc
     },
     {
       icon: <Users className="h-8 w-8 text-primary" />,
-      title: "Reliable Partner",
-      description:
-        "Trustworthy partnership you can count on for all your MRO needs"
+      title: t.reliablePartner,
+      description: t.reliablePartnerDesc
     },
     {
       icon: <Globe className="h-8 w-8 text-primary" />,
-      title: "Global Supply Network",
-      description:
-        "Developed supply network spanning India, China, LAO, and North America"
+      title: t.globalSupply,
+      description: t.globalSupplyDesc
     },
     {
       icon: <TrendingDown className="h-8 w-8 text-primary" />,
-      title: "Cost Optimization",
-      description:
-        "Supporting your savings targets through cost avoidance and reduction strategies"
+      title: t.costOptimization,
+      description: t.costOptimizationDesc
     },
     {
       icon: <Wrench className="h-8 w-8 text-primary" />,
-      title: "Expert Team",
-      description:
-        "Professional team with 15+ years international experience in FMCG companies"
+      title: t.expertTeam,
+      description: t.expertTeamDesc
     }
   ];
 
@@ -46,9 +41,12 @@ export function WhyVismaSection() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
             {t.whyVismaTitle}
           </h2>
+          <p className="text-lg text-muted-foreground text-balance">
+            {t.whyVismaSubtitle}
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {benefits.map((benefit, index) => (
             <Card
               key={index}
