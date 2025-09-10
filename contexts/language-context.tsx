@@ -22,8 +22,7 @@ export const translations: Translations = {
     contact: "Contact",
     // Hero Section
     heroTitle: "Innovative Solutions for a Digital World",
-    heroSubtitle:
-      "Empowering businesses with cutting-edge technology and expert guidance.",
+    heroSubtitle: "Global Reach. Local Advantage. With cutting-edge technology and expert guidance.",
     getStarted: "Get Started",
     // About Section
     aboutTitle: "Your Trusted Partner in Technical MRO Supply",

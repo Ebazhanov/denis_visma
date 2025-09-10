@@ -17,7 +17,7 @@ export const translations: Translations = {
     contact: 'Contact',
     // Hero Section
     heroTitle: 'Innovative Solutions for a Digital World',
-    heroSubtitle: 'Empowering businesses with cutting-edge technology and expert guidance.',
+    heroSubtitle: 'Global Reach. Local Advantage. With cutting-edge technology and expert guidance.',
     getStarted: 'Get Started',
     // About Section
     aboutTitle: 'Your Trusted Partner in Technical MRO Supply',
@@ -44,7 +44,7 @@ export const translations: Translations = {
     contact: 'Контакты',
     // Hero Section
     heroTitle: 'Инновационные решения для цифрового мира',
-    heroSubtitle: 'Расширение возможностей бизнеса с помощью передовых технологий и экспертного руководства.',
+    heroSubtitle: 'Глобальный охват. Локальное преимущество. С передовыми технологиями и экспертным сопровождением.',
     getStarted: 'Начать',
     // About Section
     aboutTitle: 'Ваш надежный партнер в поставках технических MRO',
