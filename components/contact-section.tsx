@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/language-context";
-import { Mail, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export function ContactSection() {
   const { t } = useLanguage();
@@ -37,22 +37,12 @@ export function ContactSection() {
                     <p className="text-muted-foreground">manager@ooovisma.ru</p>
                   </div>
                 </div>
-
-                <div className="flex items-center space-x-4">
-                  <MapPin className="h-6 w-6 text-primary" />
-                  <div>
-                    <p className="font-semibold">Global Presence</p>
-                    <p className="text-muted-foreground">
-                      Russia, India, China, LAO, North America
-                    </p>
-                  </div>
-                </div>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">Ready to Partner?</h3>
                 <p className="text-muted-foreground text-pretty">
-                  Let's work together to optimize your MRO procurement and
+                  Let&apos;s work together to optimize your MRO procurement and
                   achieve your cost savings targets.
                 </p>
                 <Button className="w-full" size="lg">
