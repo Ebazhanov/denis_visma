@@ -47,6 +47,31 @@ export function PartnersSection() {
               </div>
             </CardContent>
           </Card>
+
+          <Card>
+            <CardContent className="p-8 text-center">
+              <h3 className="text-2xl font-bold mb-4 text-primary">
+                Neilsoft Engineering (India)
+              </h3>
+              <p className="text-muted-foreground mb-4 text-pretty">
+                Engineering Services & Solutions in the Buildings, Process and
+                Manufacturing industry to help Clients to enhance their project
+                efficiency, increase technology adoption, and achieve digital
+                transformation.
+              </p>
+              <div className="text-sm text-muted-foreground mb-2">
+                Engineering company partnership with VISMA
+              </div>
+              <a
+                href="https://neilsoft.com/about-us/about-neilsoft"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline hover:text-primary/80 text-sm"
+              >
+                Visit Website
+              </a>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
